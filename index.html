@@ -3,202 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unblind UX — Know your worth. Land the job you deserve.</title>
+<title>Unblind UX · Know your worth. Land the job you actually deserve.</title>
+<meta name="description" content="For designers who direct AI. Position your value, think strategically, and land the job you actually deserve. Book a 1-1 call with Abanoub Awny.">
+<link rel="canonical" href="https://unblindux.com/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://unblindux.com/">
+<meta property="og:title" content="Unblind UX · Know your worth. Land the job you actually deserve.">
+<meta property="og:description" content="For designers who direct AI. Position your value, think strategically, and land the job you actually deserve.">
+<meta property="og:image" content="https://unblindux.com/assets/hero-stage.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Unblind UX · Know your worth. Land the job you actually deserve.">
+<meta name="twitter:description" content="For designers who direct AI. Position your value, think strategically, and land the job you actually deserve.">
+<meta name="twitter:image" content="https://unblindux.com/assets/hero-stage.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   /* ============================================================
-     UNBLIND UX — Community landing page (hi-fi, Framer blueprint)
-     Brand tokens mirror unblindux-brand-identity-guidelines.md
+     UNBLIND UX · Landing page (production)
+     Rebuilt to match Figma "Final Design" (frame 2434:14404).
+     Single-file, responsive, brand tokens in :root.
      ============================================================ */
   :root{
-    /* Coral */
     --coral:#E8573E; --coral-hot:#FF5733; --coral-mid:#EF6548;
     --coral-soft:#FFB8A9; --coral-soft-light:#FFC9BC;
-    /* Olive */
     --olive:#5A6E3A; --olive-tint:#EBEEDD; --olive-deep:#3F4E26;
-    /* Text */
     --ink:#1A1A1A; --body:#424242; --muted:#757575; --black:#000;
-    /* Surface */
     --white:#FFF; --off-white:#FAFAFA; --gray:#F5F5F5;
     --border:#E0E0E0; --border-subtle:#9E9E9E;
-    /* System */
     --maxw:1160px; --radius:16px; --radius-sm:12px;
     --shadow:0 1px 3px rgba(26,26,26,.06),0 8px 30px rgba(26,26,26,.06);
     --shadow-lg:0 12px 48px rgba(26,26,26,.10);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{
-    font-family:'Inter',system-ui,sans-serif;color:var(--ink);
-    background:var(--white);line-height:1.5;-webkit-font-smoothing:antialiased;
-  }
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.5;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
-  section{padding:112px 0}
-  .eyebrow{
-    font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
-    color:var(--olive);margin-bottom:18px;
-  }
-  h1,h2,h3{line-height:1.12;letter-spacing:-.02em;font-weight:800;color:var(--ink)}
-  h1{font-size:clamp(40px,6vw,72px)}
-  h2{font-size:clamp(32px,4.4vw,52px)}
-  h3{font-size:22px;font-weight:700;letter-spacing:-.01em}
+  section{padding:120px 0}
+  .eyebrow{font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--olive);margin-bottom:20px}
+  h1,h2,h3{line-height:1.08;letter-spacing:-.025em;font-weight:800;color:var(--ink)}
+  h1{font-size:clamp(44px,6.4vw,76px)}
+  h2{font-size:clamp(34px,4.8vw,58px)}
+  h3{font-size:21px;font-weight:700;letter-spacing:-.01em}
   p{color:var(--body);font-size:18px}
-  .lead{font-size:clamp(18px,2.2vw,22px);color:var(--body);line-height:1.6}
-  .reframe{color:var(--muted);font-weight:500;text-decoration:line-through;text-decoration-thickness:2px}
   .coral{color:var(--coral)}
 
-  /* Buttons */
-  .btn{
-    display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:17px;
-    padding:16px 30px;border-radius:100px;text-decoration:none;cursor:pointer;
-    border:2px solid transparent;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;
-  }
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:17px;padding:16px 30px;border-radius:100px;text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+  .btn svg{width:20px;height:20px;flex:none}
   .btn-primary{background:var(--coral);color:#fff}
   .btn-primary:hover{background:var(--coral-mid);transform:translateY(-2px);box-shadow:0 10px 24px rgba(232,87,62,.32)}
   .btn-ghost{background:transparent;color:var(--ink);border-color:var(--border)}
   .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
-  .btn-lg{padding:19px 38px;font-size:18px}
+  .btn-lg{padding:19px 40px;font-size:18px}
 
   /* Nav */
-  header{
-    position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);
-    backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border);
-  }
-  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
-  .logo .eye{width:26px;height:26px;border-radius:50%;background:var(--coral);position:relative;display:inline-flex}
-  .logo .eye::after{content:"";position:absolute;inset:7px;border-radius:50%;background:#fff}
-  .logo .eye::before{content:"";position:absolute;inset:11px;border-radius:50%;background:var(--coral);z-index:1}
-  .navlinks{display:flex;gap:34px;align-items:center}
-  .navlinks a{text-decoration:none;color:var(--body);font-size:15px;font-weight:500}
-  .navlinks a:hover{color:var(--ink)}
-  .nav-cta{margin-left:8px}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+  .logo{display:inline-flex;align-items:center;text-decoration:none}
+  .logo img{height:26px;width:auto}
+  .nav-right{display:flex;align-items:center;gap:24px}
+  .socials{display:flex;align-items:center;gap:16px}
+  .socials a{color:var(--body);display:inline-flex;transition:color .15s ease}
+  .socials a:hover{color:var(--coral)}
+  .socials svg{width:20px;height:20px}
 
   /* Hero */
-  .hero{padding:96px 0 104px;background:
-     radial-gradient(1200px 500px at 78% -8%,var(--olive-tint) 0%,transparent 60%),var(--white)}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-  .hero h1{margin-bottom:22px}
-  .hero .lead{max-width:520px;margin-bottom:34px}
+  .hero{padding:96px 0 112px;background:radial-gradient(1200px 520px at 82% -10%,var(--olive-tint) 0%,transparent 60%),var(--white)}
+  .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+  .hero h1{margin-bottom:26px}
+  .hero .lead{font-size:19px;color:var(--body);max-width:520px;margin-bottom:34px;line-height:1.55}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-  .hero-note{margin-top:20px;font-size:14px;color:var(--muted)}
-  .hero-visual{
-    position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;
-    background:linear-gradient(150deg,var(--coral) 0%,var(--coral-mid) 100%);
-    box-shadow:var(--shadow-lg);display:flex;align-items:flex-end;
-  }
-  .placeholder{
-    display:flex;align-items:center;justify-content:center;text-align:center;
-    color:#fff;font-size:14px;font-weight:500;padding:24px;line-height:1.5;
-    border:2px dashed rgba(255,255,255,.55);border-radius:10px;
-  }
-  .hero-visual .placeholder{position:absolute;inset:20px}
-  .hero-badge{
-    position:relative;z-index:2;margin:20px;padding:14px 18px;border-radius:12px;
-    background:rgba(255,255,255,.94);font-size:14px;font-weight:600;color:var(--ink);
-    box-shadow:var(--shadow);
-  }
-  .hero-badge span{color:var(--coral)}
+  .hero-visual{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:460/585}
+  .hero-visual img{width:100%;height:100%;object-fit:cover}
+  .hero-badge{position:absolute;left:20px;bottom:20px;z-index:2;padding:13px 18px;border-radius:12px;background:rgba(255,255,255,.94);font-size:14px;font-weight:600;color:var(--ink);box-shadow:var(--shadow)}
+  .hero-badge b{color:var(--coral);font-weight:700}
 
   /* Pain */
   .pain{background:var(--gray)}
-  .pain h2{max-width:760px;margin-bottom:14px}
-  .pain-sub{max-width:640px;margin-bottom:44px}
-  .pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-  .pain-card{
-    background:#fff;border:1px solid var(--border);border-radius:var(--radius-sm);
-    padding:28px;display:flex;gap:16px;align-items:flex-start;
-  }
-  .pain-card .x{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--olive-tint);
-    color:var(--olive);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px}
-  .pain-card p{font-size:17px;color:var(--ink);font-weight:500;margin:0}
-  .reframe-line{
-    margin-top:44px;padding:34px 40px;border-radius:var(--radius);background:var(--ink);color:#fff;
-    font-size:clamp(22px,3vw,30px);font-weight:700;line-height:1.3;letter-spacing:-.01em;
-  }
-  .reframe-line .reframe{color:#8a8a8a}
-
-  /* Offer / how it works */
-  .offer h2{max-width:720px;margin-bottom:16px}
-  .offer .lead{max-width:660px;margin-bottom:52px}
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:44px}
-  .step{padding:32px 28px;border:1px solid var(--border);border-radius:var(--radius);background:var(--white);transition:box-shadow .2s ease,transform .2s ease}
-  .step:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
-  .step .num{width:44px;height:44px;border-radius:12px;background:var(--coral);color:#fff;font-weight:800;font-size:19px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-  .step h3{margin-bottom:10px}
-  .step p{font-size:16px}
-  /* flexible offer slot (monetization TBD) */
-  .offer-slot{
-    border:2px dashed var(--coral-soft);border-radius:var(--radius);background:var(--off-white);
-    padding:40px;display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center;
-  }
-  .offer-slot .tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--coral);margin-bottom:12px}
-  .offer-slot h3{font-size:26px;margin-bottom:10px}
-  .offer-slot ul{list-style:none;margin:16px 0 0}
-  .offer-slot li{font-size:16px;color:var(--body);padding:7px 0 7px 26px;position:relative}
-  .offer-slot li::before{content:"";position:absolute;left:0;top:14px;width:12px;height:12px;border-radius:50%;background:var(--olive)}
-  .offer-slot .slot-note{font-size:13px;color:var(--muted);margin-top:14px;font-style:italic}
+  .pain h2{max-width:860px;margin-bottom:14px}
+  .pain .sub{font-size:19px;color:var(--body);max-width:720px;margin-bottom:48px}
+  .pain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .pain-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-sm);padding:26px 24px}
+  .pain-card .x{width:34px;height:34px;border-radius:50%;background:var(--olive-tint);color:var(--olive);display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:16px}
+  .pain-card p{font-size:17px;color:var(--ink);font-weight:600;margin:0;line-height:1.35}
+  .reframe-line{margin-top:44px;padding:34px 44px;border-radius:var(--radius);background:var(--ink);color:#fff;font-size:clamp(22px,3vw,32px);font-weight:700;line-height:1.3;letter-spacing:-.015em;text-align:center}
+  .reframe-line .reframe{color:#8a8a8a;font-weight:500;text-decoration:line-through;text-decoration-thickness:2px}
 
   /* Proof */
   .proof{background:var(--olive-tint)}
-  .stats{display:flex;gap:56px;flex-wrap:wrap;margin-bottom:56px}
-  .stat .n{font-size:clamp(40px,5vw,60px);font-weight:800;color:var(--olive-deep);letter-spacing:-.03em;line-height:1}
-  .stat .l{font-size:15px;color:var(--olive-deep);font-weight:600;margin-top:8px}
-  .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
-  .proof-copy h2{margin-bottom:18px;max-width:520px}
-  .proof-copy p{color:var(--olive-deep);opacity:.9;margin-bottom:22px}
-  .video-card{
-    aspect-ratio:16/10;border-radius:var(--radius);overflow:hidden;background:var(--olive-deep);
-    display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lg);position:relative;
-  }
-  .video-card .placeholder{border-color:rgba(255,255,255,.5);inset:20px;position:absolute}
-  .play{width:66px;height:66px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;position:relative;z-index:2}
-  .play::after{content:"";border-left:20px solid var(--olive-deep);border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:5px}
-  .mini-quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
-  .mini{background:#fff;border-radius:var(--radius-sm);padding:24px;border:1px solid rgba(90,110,58,.2)}
-  .mini p{font-size:15px;color:var(--ink);margin-bottom:14px}
-  .mini .who{font-size:13px;color:var(--muted);font-weight:600}
+  .stats{display:flex;gap:72px;flex-wrap:wrap;justify-content:center;margin-bottom:72px}
+  .stat{text-align:center}
+  .stat .n{font-size:clamp(48px,6vw,72px);font-weight:800;color:var(--olive-deep);letter-spacing:-.03em;line-height:1}
+  .stat .l{font-size:15px;color:var(--olive-deep);font-weight:600;margin-top:10px}
+  .proof-main{display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:start}
+  .proof-copy h2{max-width:640px;margin-bottom:18px}
+  .proof-copy>p{font-size:18px;color:var(--olive-deep);opacity:.92;max-width:640px;margin-bottom:36px;line-height:1.55}
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .quote{background:rgba(255,255,255,.6);border:1px solid rgba(63,78,38,.16);border-radius:var(--radius-sm);padding:22px}
+  .quote p{font-size:14px;color:var(--ink);line-height:1.5;margin-bottom:16px}
+  .quote .who{font-size:13px;color:var(--olive-deep);font-weight:600;line-height:1.4;white-space:pre-line}
 
-  /* Authority */
-  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
-  .about-photo{aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;background:var(--ink);box-shadow:var(--shadow-lg);position:relative;display:flex}
-  .about-photo .placeholder{inset:20px;position:absolute;border-color:rgba(255,255,255,.5)}
-  .about h2{margin-bottom:20px}
-  .about p{margin-bottom:18px;font-size:18px}
-  .logo-wall{margin-top:34px}
-  .logo-wall .label{font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
-  .logos{display:flex;gap:14px;flex-wrap:wrap}
-  .logo-chip{height:52px;min-width:110px;border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;font-weight:500;background:var(--gray)}
-  .talk-cta{margin-top:34px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  /* Video facade (shared) */
+  .ytfacade{position:relative;cursor:pointer;overflow:hidden;background:#000 center/cover no-repeat;box-shadow:var(--shadow-lg)}
+  .ytfacade::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.35))}
+  .ytfacade .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;z-index:2;transition:transform .15s ease}
+  .ytfacade:hover .play{transform:translate(-50%,-50%) scale(1.06)}
+  .ytfacade .play::after{content:"";border-left:22px solid var(--coral);border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+  .ytfacade iframe{width:100%;height:100%;border:0;display:block}
+  .ytfacade.loaded::before,.ytfacade.loaded .play,.ytfacade.loaded .vlabel{display:none}
+  .vlabel{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px;text-align:center;color:#fff}
+  .vlabel .t{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:-.02em}
+  .vlabel .m{font-size:14px;font-weight:600;opacity:.85;margin-top:6px}
+  .proof-video{border-radius:var(--radius);aspect-ratio:9/16;border:8px solid var(--olive-deep)}
+
+  /* About */
+  .about{background:var(--ink)}
+  .about-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:64px;align-items:center}
+  .about-photo{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:420/535}
+  .about-photo img{width:100%;height:100%;object-fit:cover}
+  .about .eyebrow{color:var(--muted)}
+  .about h2{margin-bottom:34px;color:#fff}
+  .logo-wall{margin-bottom:22px}
+  .logo-wall .label{font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+  .chips{display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+  .chip{font-size:16px;font-weight:600;color:#fff}
+  .talk-cta{margin-top:30px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .talk-cta .note{font-size:14px;color:var(--muted)}
+  .about .btn-ghost{color:#fff;border-color:rgba(255,255,255,.28)}
+  .about .btn-ghost:hover{border-color:#fff}
+  .about .btn-ghost svg{color:#FF0000}
+
+  /* Events */
+  .events{background:var(--gray)}
+  .events .head{max-width:900px;margin:0 auto;text-align:center}
+  .events h2{margin-bottom:16px}
+  .events .sub{font-size:19px;color:var(--body);max-width:720px;margin:0 auto 44px}
+  .rail{display:flex;gap:20px;overflow-x:auto;padding:6px 4px 26px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .rail::-webkit-scrollbar{height:8px}
+  .rail::-webkit-scrollbar-thumb{background:var(--border);border-radius:100px}
+  .ev{flex:0 0 300px;scroll-snap-align:start;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column}
+  .ev.pinned{position:sticky;left:0;z-index:3;background:var(--coral-soft-light);border-color:transparent}
+  .ev-img{border-radius:var(--radius-sm);overflow:hidden;aspect-ratio:308/280;margin-bottom:16px;background:var(--gray)}
+  .ev-img img{width:100%;height:100%;object-fit:cover}
+  .pills{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+  .pill{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:5px 11px;border-radius:100px;background:var(--olive-tint);color:var(--olive-deep)}
+  .pill.up{background:var(--coral);color:#fff}
+  .ev h3{font-size:19px;line-height:1.25;margin-bottom:10px}
+  .ev .venue{font-size:14px;color:var(--muted);font-weight:500;margin-bottom:16px}
+  .ev .spacer{flex:1}
+  .ev .ev-cta{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:var(--coral);text-decoration:none}
+  .ev .ev-cta:hover{gap:11px}
+  .ev .ev-cta svg{width:14px;height:14px}
+  .events-cta{margin-top:48px;text-align:center}
+  .events-cta h3{font-size:clamp(24px,3vw,32px);margin-bottom:24px}
+
+  /* Talk */
+  .talk{text-align:center}
+  .talk .head{max-width:820px;margin:0 auto 40px}
+  .talk h2{margin-bottom:18px}
+  .talk .sub{font-size:19px;color:var(--body);max-width:640px;margin:0 auto}
+  .talk-video{aspect-ratio:16/9;max-width:960px;margin:0 auto 44px;border-radius:var(--radius)}
 
   /* Final CTA */
-  .final{background:var(--coral);color:#fff;text-align:center;padding:120px 0}
-  .final .motto{max-width:760px;margin:0 auto 28px;font-size:clamp(18px,2.4vw,24px);font-weight:600;line-height:1.4}
-  .final .motto .reframe{color:rgba(255,255,255,.6);text-decoration-thickness:2px}
-  .final h2{color:#fff;max-width:720px;margin:0 auto 30px}
+  .final{background:var(--coral);color:#fff;text-align:center}
+  .final .motto{max-width:760px;margin:0 auto 30px;font-size:clamp(19px,2.4vw,26px);font-weight:700;line-height:1.4;white-space:pre-line}
+  .final .motto .reframe{color:rgba(255,255,255,.62);text-decoration:line-through;text-decoration-thickness:2px}
+  .final h2{color:#fff;max-width:680px;margin:0 auto 34px}
   .final .btn-primary{background:#fff;color:var(--coral)}
   .final .btn-primary:hover{background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.22)}
-  .final .coda{margin-top:20px;font-size:15px;color:rgba(255,255,255,.85)}
+  .final .coda{margin-top:22px;font-size:15px;color:rgba(255,255,255,.85)}
 
   /* Footer */
   footer{background:var(--ink);color:#fff;padding:56px 0 40px}
-  .foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
-  .foot-grid .logo{color:#fff}
-  .foot-links{display:flex;gap:28px;flex-wrap:wrap}
-  .foot-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:15px}
+  .foot-grid{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+  .foot-grid .logo img{height:24px}
+  .foot-links{display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+  .foot-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:15px}
   .foot-links a:hover{color:#fff}
-  .foot-bottom{margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:rgba(255,255,255,.5)}
+  .foot-bottom{margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:rgba(255,255,255,.5)}
 
-  /* Responsive */
   @media(max-width:900px){
     section{padding:80px 0}
-    .hero-grid,.proof-grid,.about-grid,.offer-slot{grid-template-columns:1fr;gap:36px}
-    .hero-visual{max-width:420px}
-    .steps,.pain-grid,.mini-quotes{grid-template-columns:1fr}
-    .navlinks{display:none}
-    .stats{gap:32px}
+    .hero{padding:64px 0 72px}
+    .hero-grid,.about-grid,.proof-main{grid-template-columns:1fr;gap:40px}
+    .hero-visual,.about-photo{max-width:440px}
+    .proof-video{max-width:320px;margin:0 auto}
+    .pain-grid{grid-template-columns:1fr 1fr}
+    .quotes{grid-template-columns:1fr}
+    .stats{gap:44px}
+  }
+  @media(max-width:560px){
+    .wrap{padding:0 20px}
+    .pain-grid{grid-template-columns:1fr}
+    .socials{display:none}
+    .nav-right{gap:0}
+    .btn{padding:14px 24px;font-size:16px}
   }
 </style>
 </head>
@@ -208,34 +212,44 @@
 <header>
   <div class="wrap">
     <nav>
-      <a href="#" class="logo"><span class="eye"></span>Unblind UX</a>
-      <div class="navlinks">
-        <a href="#pain">Why it matters</a>
-        <a href="#offer">How it works</a>
-        <a href="#proof">Proof</a>
-        <a href="#about">About</a>
-        <a href="#book" class="btn btn-primary nav-cta">Book a call</a>
+      <a href="#top" class="logo" aria-label="Unblind UX home"><img src="assets/logo.svg" alt="Unblind UX"></a>
+      <div class="nav-right">
+        <div class="socials">
+          <a href="https://www.linkedin.com/company/unblindux/" target="_blank" rel="noopener" aria-label="Unblind UX on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.24 8.25H4.7V24H.24V8.25zM8.34 8.25h4.28v2.15h.06c.6-1.13 2.05-2.32 4.22-2.32 4.51 0 5.34 2.97 5.34 6.83V24h-4.46v-6.98c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V24H8.34V8.25z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/unblindux" target="_blank" rel="noopener" aria-label="Unblind UX on Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.24A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.89A4.29 4.29 0 1 1 16.29 12 4.29 4.29 0 0 1 12 16.29zm6.85-11.15a1.54 1.54 0 1 1-1.54-1.54 1.54 1.54 0 0 1 1.54 1.54z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@UnblindUX" target="_blank" rel="noopener" aria-label="Unblind UX on YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+          </a>
+        </div>
+        <a href="https://adplist.org/mentors/abanoub-awny?session=unblind-ux-mentoring-session-cbf7-mth7wl6a" target="_blank" rel="noopener" class="btn btn-primary">Book your 1-1 call</a>
       </div>
     </nav>
   </div>
 </header>
 
+<span id="top"></span>
+
 <!-- ============ 1. HERO ============ -->
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">For designers who want more than the next job</div>
-      <h1>Know your worth.<br>Land the job you <span class="coral">actually deserve.</span></h1>
+      <h1>Know your worth.<br>Land the job you actually <span class="coral">deserve.</span></h1>
       <p class="lead">You are a capable designer. The market does not reward capable on its own. It rewards designers who can position their value, think strategically, and direct AI instead of fearing it. That is the work we do here.</p>
       <div class="hero-cta">
-        <a href="#book" class="btn btn-primary btn-lg">Book a call</a>
-        <a href="#about" class="btn btn-ghost btn-lg">Watch the free talk</a>
+        <a href="https://adplist.org/mentors/abanoub-awny?session=unblind-ux-mentoring-session-cbf7-mth7wl6a" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book your 1-1 call</a>
+        <a href="https://youtu.be/yqWuqQt96aQ" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+          Watch the free talk
+        </a>
       </div>
-      <div class="hero-note">Practitioner-led. 12+ years in the field. Still in it.</div>
     </div>
     <div class="hero-visual">
-      <div class="placeholder">[ Photo of Abanoub delivering a talk<br>replace with your speaking shot ]</div>
-      <div class="hero-badge">Trusted by <span>1,500+</span> designers across 7 events</div>
+      <img src="assets/hero-stage.jpg" alt="Abanoub Awny speaking on stage at an Unblind UX event" width="460" height="585">
+      <div class="hero-badge"><b>1,500+</b> designers · 7 events</div>
     </div>
   </div>
 </section>
@@ -244,134 +258,187 @@
 <section class="pain" id="pain">
   <div class="wrap">
     <div class="eyebrow">Sound familiar?</div>
-    <h2>You are good at the work. So why does the market not show it?</h2>
-    <p class="pain-sub lead">If any of these hit close, you are not the problem. Your positioning is.</p>
+    <h2>You are good at the work.<br>So why does the market not show it?</h2>
+    <p class="sub">If any of these hit close, you are not the problem. Your positioning is.</p>
     <div class="pain-grid">
-      <div class="pain-card"><div class="x">✕</div><p>You apply, tailor, follow up, and still get ghosted.</p></div>
-      <div class="pain-card"><div class="x">✕</div><p>You watch less capable designers land the roles and the pay.</p></div>
-      <div class="pain-card"><div class="x">✕</div><p>Everyone says "learn AI," but no one shows you how to use it as a designer.</p></div>
-      <div class="pain-card"><div class="x">✕</div><p>You know you are worth more. You just cannot prove it on paper yet.</p></div>
+      <div class="pain-card"><div class="x">✕</div><p>Applications ghosted.</p></div>
+      <div class="pain-card"><div class="x">✕</div><p>Paid less than your peers.</p></div>
+      <div class="pain-card"><div class="x">✕</div><p>AI advice, zero direction.</p></div>
+      <div class="pain-card"><div class="x">✕</div><p>Worth more than your resume says.</p></div>
     </div>
-    <div class="reframe-line">The problem was never your skill. <span class="reframe">You just need to work harder.</span> You need to position what you already have.</div>
+    <div class="reframe-line"><span class="reframe">Work harder.</span> &nbsp;Position what you already have.</div>
   </div>
 </section>
 
-<!-- ============ 3. OFFER / HOW IT WORKS ============ -->
-<section class="offer" id="offer">
-  <div class="wrap">
-    <div class="eyebrow">What Unblind UX actually does</div>
-    <h2>A practitioner-led path from stuck to positioned.</h2>
-    <p class="lead">Unblind UX is a community for designers who want to direct AI, think strategically, and build a career that reflects their real worth. Here is how we get you there.</p>
-    <div class="steps">
-      <div class="step">
-        <div class="num">1</div>
-        <h3>Book a call</h3>
-        <p>We map where you are, where you want to be, and the gap between the two. Honest, no script.</p>
-      </div>
-      <div class="step">
-        <div class="num">2</div>
-        <h3>Get a plan</h3>
-        <p>Positioning, portfolio, and an AI-native workflow built around your actual strengths, not a template.</p>
-      </div>
-      <div class="step">
-        <div class="num">3</div>
-        <h3>Grow with serious designers</h3>
-        <p>A room of practitioners who give real feedback, hold you accountable, and push your thinking.</p>
-      </div>
-    </div>
-
-    <!-- FLEXIBLE OFFER SLOT — monetization still being decided -->
-    <div class="offer-slot">
-      <div>
-        <span class="tag">Your offer goes here</span>
-        <h3>[ The paid thing: membership, 1:1, or cohort ]</h3>
-        <p>This block is a flexible slot. Once you lock the model, it becomes your pricing / membership / program card. Options ready to drop in:</p>
-        <ul>
-          <li>Community membership with monthly access and feedback</li>
-          <li>1:1 mentorship track with a positioning plan</li>
-          <li>Cohort program with a start date and cap</li>
-        </ul>
-        <p class="slot-note">Decide the model, then we write the copy and price. The rest of the page does not change.</p>
-      </div>
-      <div style="text-align:center">
-        <a href="#book" class="btn btn-primary btn-lg">Book a call</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 4. PROOF ============ -->
+<!-- ============ 3. PROOF ============ -->
 <section class="proof" id="proof">
   <div class="wrap">
     <div class="stats">
-      <div class="stat"><div class="n">7</div><div class="l">Events hosted</div></div>
+      <div class="stat"><div class="n">6</div><div class="l">Events hosted</div></div>
       <div class="stat"><div class="n">1,500+</div><div class="l">Designers in the room</div></div>
       <div class="stat"><div class="n">100+</div><div class="l">Designers mentored</div></div>
     </div>
-    <div class="proof-grid">
+    <div class="proof-main">
       <div class="proof-copy">
-        <div class="eyebrow" style="color:var(--olive-deep)">Real outcomes</div>
-        <h2>The designers I mentored are not stuck anymore.</h2>
-        <p>I mentored 101 designers through Udacity and more directly through Unblind UX. A lot of them are mid-senior today, leading work at companies they once thought were out of reach. This is the outcome we are after, not another portfolio review.</p>
-        <a href="#book" class="btn btn-primary">Start your plan</a>
+        <h2>Designers I mentored ain’t stuck anymore.</h2>
+        <p>I mentored 101 designers through Udacity and few directly through Unblind UX. A lot of them are mid-senior today, leading work at companies they once thought were out of reach. This is the outcome we are after, not another portfolio review.</p>
+        <div class="quotes">
+          <div class="quote">
+            <p>"Abanoub showed me exactly where my profile stands and what to change for better positioning in the current market, without sugarcoating anything."</p>
+            <div class="who">H.J.
+Frontend &amp; Mobile Developer</div>
+          </div>
+          <div class="quote">
+            <p>"Talking with Abanoub pushes you to think differently about how you market yourself, and that skill turned out to matter more than I expected."</p>
+            <div class="who">M.M.
+Senior Product Designer, Onething Design</div>
+          </div>
+          <div class="quote">
+            <p>"He understood my background before the resume review, then walked me through my job-application strategy and how to use AI to speed up the search."</p>
+            <div class="who">Y.B.
+Product Designer</div>
+          </div>
+        </div>
       </div>
-      <div class="video-card">
-        <div class="placeholder">[ Mentee video testimonial<br>embed replaces this block ]</div>
-        <div class="play"></div>
+      <div class="ytfacade proof-video" data-id="KeGGSfGjb08" data-title="From UX Skills to Personal Brand: A Real Mentorship Story" role="button" tabindex="0" aria-label="Play mentee testimonial with Pallavi Sen" style="background-image:url('https://i.ytimg.com/vi/KeGGSfGjb08/maxresdefault.jpg')">
+        <div class="play" aria-hidden="true"></div>
       </div>
-    </div>
-    <div class="mini-quotes">
-      <div class="mini"><p>"[ Short mentee quote about the outcome they got. ]"</p><div class="who">Name, role now</div></div>
-      <div class="mini"><p>"[ Short mentee quote about positioning or AI workflow. ]"</p><div class="who">Name, role now</div></div>
-      <div class="mini"><p>"[ Short mentee quote about landing the role. ]"</p><div class="who">Name, role now</div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ 5. AUTHORITY (ABANOUB) ============ -->
+<!-- ============ 4. ABOUT ============ -->
 <section class="about" id="about">
   <div class="wrap about-grid">
     <div class="about-photo">
-      <div class="placeholder">[ Portrait or on-stage photo of Abanoub ]</div>
+      <img src="assets/about-portrait.jpg" alt="Portrait of Abanoub Awny" width="420" height="535">
     </div>
     <div>
-      <div class="eyebrow">Who is behind this</div>
-      <h2>I am Abanoub. I have spent 12+ years designing for the companies you are aiming at.</h2>
-      <p>Strategic product designer, AI-native in daily practice, based in Hamburg. I did not leave the field to coach from the sidelines. I am still shipping, still making the hard calls, and I bring that into every session.</p>
-      <p>My talks and work have reached designers well beyond the room. The thinking I teach is the thinking I use.</p>
-
+      <div class="eyebrow">Hi</div>
+      <h2>I’m Abanoub.<br><span class="coral">13 years</span> designing for <span class="coral">companies you’re aiming at.</span></h2>
       <div class="logo-wall">
         <div class="label">Worked with</div>
-        <div class="logos">
-          <div class="logo-chip">[ Brand ]</div>
-          <div class="logo-chip">[ Brand ]</div>
-          <div class="logo-chip">[ Brand ]</div>
-          <div class="logo-chip">[ Brand ]</div>
+        <div class="chips">
+          <span class="chip">SAP</span>
+          <span class="chip">Meta</span>
+          <span class="chip">Match Group</span>
+          <span class="chip">Udacity</span>
+          <span class="chip">PlayStation</span>
         </div>
       </div>
       <div class="logo-wall">
         <div class="label">Featured in</div>
-        <div class="logos">
-          <div class="logo-chip">[ Feature ]</div>
-          <div class="logo-chip">[ Feature ]</div>
-          <div class="logo-chip">[ Feature ]</div>
+        <div class="chips">
+          <span class="chip">Nasdaq 2019</span>
+          <span class="chip">SAP Sapphire 2026</span>
         </div>
       </div>
-
       <div class="talk-cta">
-        <a href="#" class="btn btn-ghost">Watch: Land your dream job with AI</a>
-        <span style="font-size:14px;color:var(--muted)">Free talk on YouTube</span>
+        <a href="https://youtu.be/yqWuqQt96aQ" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+          Watch: Land your dream job with AI
+        </a>
+        <span class="note">Recorded talk on YouTube</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 6. FINAL CTA ============ -->
+<!-- ============ 5. EVENTS ============ -->
+<section class="events" id="events">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">On stage</div>
+      <h2>Events I hosted or invited to speak at.</h2>
+      <p class="sub">2 events I run, 4 I was invited to speak at. our partners:</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="rail">
+      <!-- Upcoming: pinned first, coral tint -->
+      <article class="ev pinned">
+        <div class="ev-img"><img src="assets/event-employedworld.jpg" alt="Employed.world Gathering #3 at 42 Berlin"></div>
+        <div class="pills"><span class="pill">Speaker</span><span class="pill up">Upcoming</span></div>
+        <h3>Cut research synthesis by 70%, keep 100% of the insight</h3>
+        <div class="venue">Employed.world Gathering #3 · 42 Berlin</div>
+        <div class="spacer"></div>
+        <a class="ev-cta" href="https://luma.com/ir8ti0d8" target="_blank" rel="noopener">Get your ticket <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </article>
+
+      <article class="ev">
+        <div class="ev-img"><img src="assets/event-ux2025.jpg" alt="UX 2025 at Mutabor, Hamburg"></div>
+        <div class="pills"><span class="pill">Host</span></div>
+        <h3>Hunting your next design job using data and AI</h3>
+        <div class="venue">UX 2025 · Mutabor, Hamburg</div>
+        <div class="spacer"></div>
+        <a class="ev-cta" href="https://youtu.be/yqWuqQt96aQ" target="_blank" rel="noopener">Watch the recorded talk on YouTube <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </article>
+
+      <article class="ev">
+        <div class="ev-img"><img src="assets/event-ainative.jpg" alt="UX Maturity Meetup at SAP, Berlin"></div>
+        <div class="pills"><span class="pill">Speaker</span></div>
+        <h3>AI-native UX teams: co-piloting EPD decisions</h3>
+        <div class="venue">UX Maturity Meetup · SAP, Berlin</div>
+        <div class="spacer"></div>
+        <a class="ev-cta" href="https://drive.google.com/file/d/1d-NJna95vtD0PZkJIp0pa3uSLQYyoEBO/view" target="_blank" rel="noopener">Get the slides <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </article>
+
+      <article class="ev">
+        <div class="ev-img"><img src="assets/event-nextuser.jpg" alt="Designing AI Experiences at SAP, Berlin"></div>
+        <div class="pills"><span class="pill">Speaker</span></div>
+        <h3>Your Next User Isn't Human</h3>
+        <div class="venue">Designing AI Experiences · SAP, Berlin</div>
+        <div class="spacer"></div>
+        <a class="ev-cta" href="https://drive.google.com/file/d/15Bmi9fYgBhq4mW_mA1bNwRqqq8i4ubzE/view" target="_blank" rel="noopener">Get the slides <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </article>
+
+      <article class="ev">
+        <div class="ev-img"><img src="assets/event-resilience.jpeg" alt="Hamburg UX and Tech Meetup at adjoe, Hamburg"></div>
+        <div class="pills"><span class="pill">Speaker</span><span class="pill">Panel</span></div>
+        <h3>Resilience as a UX professional</h3>
+        <div class="venue">Hamburg UX &amp; Tech Meetup · adjoe, Hamburg</div>
+        <div class="spacer"></div>
+      </article>
+
+      <article class="ev">
+        <div class="ev-img"><img src="assets/event-exmox.jpeg" alt="Hamburg UX and Tech Meetup at exmox, Hamburg"></div>
+        <div class="pills"><span class="pill">Host</span></div>
+        <h3>Opened with an Unblind UX intro</h3>
+        <div class="venue">Hamburg UX &amp; Tech Meetup · exmox, Hamburg</div>
+        <div class="spacer"></div>
+      </article>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="events-cta">
+      <h3>Got a stage? I'll bring the talk.</h3>
+      <a href="mailto:eng.abanoub.awny@live.co.uk" class="btn btn-primary btn-lg">Invite me to speak at your event</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. TALK ============ -->
+<section class="talk">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">See it for yourself</div>
+      <h2>The talk this is all built on.</h2>
+      <p class="sub">A free, recorded session on positioning and using AI to land the job you deserve.</p>
+    </div>
+    <div class="ytfacade talk-video" data-id="yqWuqQt96aQ" data-title="Hunting your next design job using data and AI" role="button" tabindex="0" aria-label="Play the free talk: Land your dream job with AI" style="background-image:url('https://i.ytimg.com/vi/yqWuqQt96aQ/maxresdefault.jpg')">
+      <div class="play" aria-hidden="true"></div>
+    </div>
+    <a href="https://adplist.org/mentors/abanoub-awny?session=unblind-ux-mentoring-session-cbf7-mth7wl6a" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book your 1-1 call</a>
+  </div>
+</section>
+
+<!-- ============ 7. FINAL CTA ============ -->
 <section class="final" id="book">
   <div class="wrap">
-    <p class="motto">The home for designers who direct AI <span class="reframe">designers getting replaced by it.</span> Strategic. AI-fluent. Practitioner-led.</p>
+    <p class="motto">The home for designers who direct AI
+<span class="reframe">designers getting replaced by it.</span></p>
     <h2>Ready to stop settling for the next job?</h2>
-    <a href="#" class="btn btn-primary btn-lg">Book a call on ADPList</a>
+    <a href="https://adplist.org/mentors/abanoub-awny?session=unblind-ux-mentoring-session-cbf7-mth7wl6a" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a call on ADPList</a>
     <p class="coda">A real conversation about your positioning. No pressure, no script.</p>
   </div>
 </section>
@@ -380,17 +447,42 @@
 <footer>
   <div class="wrap">
     <div class="foot-grid">
-      <a href="#" class="logo"><span class="eye"></span>Unblind UX</a>
+      <a href="#top" class="logo" aria-label="Unblind UX home"><img src="assets/logo-white.svg" alt="Unblind UX"></a>
       <div class="foot-links">
-        <a href="#">LinkedIn</a>
-        <a href="#">Instagram</a>
-        <a href="#">YouTube</a>
-        <a href="#book">Book a call</a>
+        <a href="https://www.linkedin.com/company/unblindux/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/unblindux" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@UnblindUX" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://adplist.org/mentors/abanoub-awny?session=unblind-ux-mentoring-session-cbf7-mth7wl6a" target="_blank" rel="noopener">Book a call</a>
       </div>
     </div>
-    <div class="foot-bottom">Unblind UX. Strategic. AI-fluent. Practitioner-led.</div>
+    <div class="foot-bottom">© <span id="yr">2026</span> Unblind UX. The home for designers who direct AI.</div>
   </div>
 </footer>
+
+<script>
+  // Click-to-load YouTube facades (privacy-friendly, fast first paint)
+  (function(){
+    function load(el){
+      if(el.classList.contains('loaded')) return;
+      var id = el.getAttribute('data-id');
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      f.title = el.getAttribute('data-title') || 'Video';
+      f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      f.setAttribute('allowfullscreen','');
+      el.innerHTML = '';
+      el.appendChild(f);
+      el.classList.add('loaded');
+    }
+    document.querySelectorAll('.ytfacade').forEach(function(el){
+      el.addEventListener('click', function(){ load(el); });
+      el.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); load(el); }
+      });
+    });
+    var y = document.getElementById('yr'); if(y){ y.textContent = new Date().getFullYear(); }
+  })();
+</script>
 
 </body>
 </html>
