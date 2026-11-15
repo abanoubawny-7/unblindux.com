@@ -203,6 +203,23 @@
     .socials{display:none}
     .nav-right{gap:0}
     .btn{padding:14px 24px;font-size:16px}
+
+    /* Mobile usability fixes (phones only; iPad 768+ and desktop untouched) */
+    section{padding:56px 0}                                  /* F4: trim tall section padding */
+    h1{font-size:34px}                                       /* F5: right-size hero headline */
+    h2{font-size:27px}                                       /* F5: right-size section headings */
+    .hero-cta{flex-direction:column}                         /* F3: stack hero CTAs */
+    .hero-cta .btn{width:100%;justify-content:center}        /* F3: full-width, centered */
+    .reframe-line{padding:24px}                              /* F6: lighter side padding */
+    .stats{flex-direction:column;gap:22px;margin-bottom:48px}/* F8: tidy stacked stats */
+    .stat .n{font-size:44px}                                 /* F8: contain big numbers */
+    .proof-video{width:240px;max-width:100%}                 /* F7: explicit width so 9/16 video doesn't collapse */
+    .rail{gap:14px}                                          /* F2: tighter rail gap */
+    .ev{flex:0 0 82%}                                        /* F2: show peek of next card */
+    .ev.pinned{position:static}                              /* F1: stop sticky card blocking rail */
+    .ev .ev-cta{min-height:44px}                             /* F9: 44px tap target */
+    .foot-links a{display:inline-flex;align-items:center;min-height:44px} /* F9: 44px tap target */
+    header .btn{padding:10px 16px;font-size:14px;white-space:nowrap}      /* F11: keep nav CTA on one line */
   }
 </style>
 </head>
@@ -249,7 +266,7 @@
     </div>
     <div class="hero-visual">
       <img src="assets/hero-stage.jpg" alt="Abanoub Awny speaking on stage at an Unblind UX event" width="460" height="585">
-      <div class="hero-badge"><b>1,500+</b> designers · 7 events</div>
+      <div class="hero-badge"><b>2,200+</b> designers · 8 events</div>
     </div>
   </div>
 </section>
